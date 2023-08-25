@@ -19,6 +19,9 @@ const OPTIONS = [
   "Biography",
   "Comedy",
   "Science",
+  "NonFiction",
+  "Eassy",
+  "SelfHelp",
 ];
 
 interface HomePageProps {
@@ -53,6 +56,9 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
         Biography: 0,
         Comedy: 0,
         Science: 0,
+        NonFiction: 0,
+        Eassy: 0,
+        SelfHelp: 0,
         isValidate: 1,
         userId: userId,
       };
