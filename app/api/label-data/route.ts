@@ -16,6 +16,17 @@ export async function PUT(request: Request) {
       data: data,
     });
 
+    const count = await prisma?.user.update({
+      where: {
+        id: data.userId,
+      },
+      data: {
+        count: {
+          increment: 1,
+        },
+      },
+    });
+
     return NextResponse.json(response);
   } catch (error) {
     return NextResponse.error();

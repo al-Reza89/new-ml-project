@@ -17,6 +17,7 @@ model User {
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   verified       Boolean   @default(false)
+  count          Int       @default(0)
 
   accounts    Account[]
   collections Collection[]
