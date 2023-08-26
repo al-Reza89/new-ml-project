@@ -121,6 +121,9 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
           <div className="bg-base-100 p-4 rounded-md">
             <p className="indent-8">{mlData?.summery}</p>
           </div>
+          <div className="text-gray-400  ">
+            Please Select Multiple Category:
+          </div>
           <div className="pt-4  md:flex md:items-center gap-4 ">
             <Select
               mode="multiple"
