@@ -6,6 +6,7 @@ import { Collection } from "@prisma/client";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { PulseLoader } from "react-spinners";
 
 const OPTIONS = [
   "Adventure",
@@ -142,7 +143,7 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
               <button
                 className={`bg-green-900 h-10 w-full md:w-24 mt-6 md:gap-5 md:mt-0 rounded-sm text-white font-bold text-lg px-2 py-1 cursor-not-allowed `}
               >
-                submited
+                <PulseLoader color="#f8f6fc" />
               </button>
             ) : (
               <button
