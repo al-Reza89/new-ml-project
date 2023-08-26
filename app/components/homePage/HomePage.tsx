@@ -80,10 +80,10 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
         .catch((error) => {
           toast.error("somethig went wrong");
         })
-        .finally(() => {});
+        .finally(() => {
+          setIsLoading(false);
+        });
     }
-
-    setIsLoading(false);
   }, [mlData?.id, router, selectedItems, userId]);
 
   return (
@@ -138,15 +138,23 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
                 label: item,
               }))}
             />
-            <button
-              onClick={handleSubmit}
-              disabled={isLoading}
-              className={`bg-green-600 h-10 w-full md:w-20 mt-6 md:gap-5 md:mt-0 rounded-sm text-white font-bold text-lg px-2 py-1  ${
-                isLoading ? "cursor-not-allowed" : ""
-              } `}
-            >
-              submit
-            </button>
+            {isLoading ? (
+              <button
+                className={`bg-green-900 h-10 w-full md:w-24 mt-6 md:gap-5 md:mt-0 rounded-sm text-white font-bold text-lg px-2 py-1 cursor-not-allowed `}
+              >
+                submited
+              </button>
+            ) : (
+              <button
+                onClick={handleSubmit}
+                disabled={isLoading}
+                className={`bg-green-600 h-10 w-full md:w-20 mt-6 md:gap-5 md:mt-0 rounded-sm text-white font-bold text-lg px-2 py-1  ${
+                  isLoading ? "cursor-not-allowed" : ""
+                } `}
+              >
+                submit
+              </button>
+            )}
           </div>
         </div>
       </div>
