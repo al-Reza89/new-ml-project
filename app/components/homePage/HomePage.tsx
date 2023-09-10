@@ -9,20 +9,13 @@ import { useRouter } from "next/navigation";
 import { PulseLoader } from "react-spinners";
 
 const OPTIONS = [
-  "Adventure",
-  "Horror",
-  "Mystery",
-  "ScienceFiction",
-  "Fantasy",
-  "Romance",
-  "Thriller",
-  "Crime",
-  "Biography",
-  "Comedy",
-  "Science",
+  "Fiction",
   "NonFiction",
-  "Eassy",
-  "SelfHelp",
+  "Drama",
+  "Mystery",
+  "Tragedy",
+  "Thriller",
+  "Motivational",
 ];
 
 interface HomePageProps {
@@ -46,20 +39,13 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
       setIsLoading(true);
       const data: any = {
         id: mlData?.id,
-        Adventure: 0,
-        Horror: 0,
-        Mystery: 0,
-        ScienceFiction: 0,
-        Fantasy: 0,
-        Romance: 0,
-        Thriller: 0,
-        Crime: 0,
-        Biography: 0,
-        Comedy: 0,
-        Science: 0,
+        Fiction: 0,
         NonFiction: 0,
-        Eassy: 0,
-        SelfHelp: 0,
+        Drama: 0,
+        Mystery: 0,
+        Tragedy: 0,
+        Thriller: 0,
+        Motivational: 0,
         isValidate: 1,
         userId: userId,
       };
