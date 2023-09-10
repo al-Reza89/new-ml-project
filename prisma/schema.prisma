@@ -59,6 +59,7 @@ model Collection {
   Romance           Int     @default(0)
   Thriller          Int     @default(0)
   Motivational      Int     @default(0)
+  Romantic          Int     @default(0)
   userId            String? @db.ObjectId
   isValidate        Int     @default(0)
   isShow            Int     @default(0)
