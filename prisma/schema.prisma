@@ -51,20 +51,14 @@ model Collection {
   publisher         String
   summery           String
   title             String
-  Adventure         Int     @default(0)
-  Horror            Int     @default(0)
+  Fiction           Int     @default(0)
+  NonFiction        Int     @default(0)
+  Drama             Int     @default(0)
   Mystery           Int     @default(0)
-  ScienceFiction    Int     @default(0)
-  Fantasy           Int     @default(0)
+  Tragedy           Int     @default(0)
   Romance           Int     @default(0)
   Thriller          Int     @default(0)
-  Crime             Int     @default(0)
-  Biography         Int     @default(0)
-  Comedy            Int     @default(0)
-  Science           Int     @default(0)
-  NonFiction        Int     @default(0)
-  Eassy             Int     @default(0)
-  SelfHelp          Int     @default(0)
+  Motivational      Int     @default(0)
   userId            String? @db.ObjectId
   isValidate        Int     @default(0)
   isShow            Int     @default(0)
