@@ -22,14 +22,15 @@ const OPTIONS = [
 interface HomePageProps {
   mlData: Partial<Collection> | any;
   userId: string;
+  count: number;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
+const HomePage: React.FC<HomePageProps> = ({ mlData, userId, count }) => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  console.log({ mydata: mlData });
+  // console.log({ mydata: mlData });
 
   const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
 
@@ -77,6 +78,9 @@ const HomePage: React.FC<HomePageProps> = ({ mlData, userId }) => {
 
   return (
     <div className=" flex flex-col gap-5">
+      <div className="text-2xl font-bold text-blue-600 ">
+        Submission Count: {count}
+      </div>
       <div>
         <div className="  collapse collapse-plus border border-base-300 bg-base-200">
           <input type="checkbox" />
